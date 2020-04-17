@@ -304,6 +304,12 @@ footer .social-link{
     font-size:1.5em;
     display:block;
 }
+footer .social-link .extended{
+    color:black;
+    font-size:0.7em;
+    font-weight:bold;
+    text-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
+}
 footer .row{
     margin:0;
 }
@@ -311,4 +317,203 @@ footer .vcenter{
     position:relative;
     top:50%;
     transform: translateY(-50%);
+}
+
+/*Listings page css*/
+.content, .side-menu, .right-menu{
+    margin-top:70px;
+}
+.side-menu{
+    position:fixed;
+    height:100%;
+    top:0;
+    overflow-y:scroll;
+    padding:0;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(2, 1, 19, 0.9727241238292192) 100%);
+}
+.side-menu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.side-menu ul li{
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(2, 1, 19, 0.9727241238292192) 100%);
+    color:white;
+}
+.side-menu .caption h5{
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(2, 1, 19, 0.9727241238292192) 100%);
+    padding: 0.5em 1em;
+    text-align:center;
+    border-width: 0 2px 0 2px;
+    border-style:solid;
+    border-color:red;
+    margin:0;
+    color:white;
+    font-weight:bold;
+}
+.side-menu .menu .menu-link{
+    text-decoration:none;
+    color:white;
+    display:block;
+    padding: 0.7em 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing:2px;
+    font-size:0.7em;
+    transition: background 0.3s;
+    position:relative;
+}
+.side-menu .menu .active{
+    background:#020113;
+}
+.side-menu .menu .menu-link:hover{
+    background:#020113;
+}
+.side-menu .menu .menu-link .fa-star{
+    padding-right:0.2em;
+    color:yellow;
+    font-size:1.5em;
+}
+.side-menu .menu .num-indicator{
+    position:absolute;
+    right:5%;
+    font-size:0.6em;
+    border: 2px solid red;
+    border-radius:100%;
+    padding: 0.3em;
+    font-weight:bold;
+    text-align:center;
+    width:11%;
+}
+
+.content{
+    margin-left:16.66%;
+}
+.right-menu{
+    height: 100%;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(180deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    position:fixed;
+    top:0;
+    right:0;
+    overflow-y:scroll;
+}
+.right-menu .wk-phone-title{
+    text-align:center;
+    color:white;
+    text-shadow: 0 -5px 5px gold;
+    animation-name: wk-caption-animation;
+    animation-duration:1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:2em;
+}
+
+.right-menu .card{
+    padding:0;
+    padding-top:1em;
+    width:100%;
+    background:rgba(255, 255, 255, 0.2);
+}
+.right-menu .card .card-image-top {
+    height: 100%;
+    border-radius: 15%;
+    animation-name: wk-phone-img-animation;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.wk-phone-container{
+    margin-top:30%;
+}
+.right-menu .card-body{
+    font-weight:500;
+    position:relative;
+}
+.right-menu .card-body .card-title{
+    text-transform:uppercase;
+    color:white;
+    font-weight: bold;
+}
+.right-menu .card-body .fa-heart{
+    color:red;
+}
+.right-menu .card-body .fa-eye{
+    color:blue;
+}
+.right-menu .card-body .explore{
+    display:block;
+    text-decoration:none;
+    background: rgba(255, 255, 255, 0.07);
+    color:rgb(43, 43, 173);
+    padding:0.5em 1em;
+    font-weight:bold;
+    border: 2px solid transparent;
+    width:80%;
+    margin-left:50%;
+    transform:translateX(-50%);
+    transition:border 0.3s, background 0.6s, color 0.6s;
+}
+.right-menu .card-body .explore:hover{
+    border: 2px solid #b30000;
+    background:#ff0000;
+    color:white;
+}
+/* Custom scroll bar */
+::-webkit-scrollbar-track {
+    border: 1px solid white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #eeff00;
+    border-radius: 10px;
+}
+
+/*Custom animations*/
+@keyframes wk-caption-animation {
+    0% {
+        text-shadow: 0 0 0 gold, 0 0 0 gold, 0 0 0 gold, 0 0 0 gold;
+    }
+
+    50% {
+        text-shadow: 0 -5px 5px gold, 5px 0 5px gold, 0 5px 5px gold, -5px 0 5px gold;
+    }
+
+    100% {
+        text-shadow: 0 0 0 gold, 0 0 0 gold, 0 0 0 gold, 0 0 0 gold;
+    }
+}
+
+@keyframes wk-phone-img-animation {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    10% {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+
+    20% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+
+    30% {
+        transform: rotate3d(0, 1, 0, 270deg);
+    }
+
+    40% {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
 }
